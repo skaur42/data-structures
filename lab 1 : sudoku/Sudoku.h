@@ -14,7 +14,6 @@ private:
 public:
   /**
    * Construct a new Sudoku object
-   * DO NOT change this function.
    *
    * @param board The grid in 1D.
    */
@@ -28,7 +27,6 @@ public:
 
   /**
    * Print the grid in 1D.
-   * DO NOT change this function.
    */
   void print(std::ostream &os) const {
     for (int row = 0; row < SIZE; row++) {
