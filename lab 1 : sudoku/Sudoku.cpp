@@ -3,9 +3,7 @@
 namespace ds {
 
 bool isValid(int grid[9][9], int i, int j, int n) {
-  // You should implement this function to
-  // check the validness of n if placed in grid[i][j].
-  //
+  // Check the validness of n if placed in grid[i][j].
   // It returns false if row i of grid contains n,
   //    returns false if column j of grid contains n,
   //    returns false if subgrid of i and j contains n,
@@ -28,14 +26,6 @@ bool isValid(int grid[9][9], int i, int j, int n) {
     }
   }
 
-  /*
-  int substart = grid[3 * (i / 3)][3 * (j / 3)];
-  int subend = grid[3 * (i / 3) + 2][3 * (j / 3) + 2];
-  for(int k = 0; k <= 8; k++){
-      if(grid[3 * (i / 3) + k / 3][3 * (j / 3) + k % 3] == n)
-        return false;
-  }
-  */
   return true;
 
 }
@@ -73,7 +63,6 @@ bool backtrack(int grid [9][9], int i, int j){
  * Note: 0 indicates an empty cell.
  */
 void Sudoku::solve() {
-  // TODO:
   backtrack(this->grid, 0, 0);
 }
 
