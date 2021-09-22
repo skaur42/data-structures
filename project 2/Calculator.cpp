@@ -7,7 +7,6 @@ namespace ds {
 
 /** Transform an `infix` expression to a `postifx` expression */
 std::string Calculator::infixToPostfix(const std::string &infix) {
-  // TODO:
   // Empty character stack and blank postfix string.
   std::stack<char> opStack;
   std::string postFixString = "";
@@ -70,7 +69,6 @@ std::string Calculator::infixToPostfix(const std::string &infix) {
 
 /** Evaluate and return the value of `postfix` expression */
 BigInt Calculator::evaluatePostfix(const std::string &postfix) {
-  // TODO:
   std::stack<BigInt> stk;
   std::string temp;
   // iterate through postfix string
