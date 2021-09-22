@@ -66,7 +66,7 @@ public:
 /** Copy constructor. */
 template <typename ItemType>
 SLList<ItemType>::SLList(const SLList<ItemType> &other) {
-  // TODO: create a list that is identical to `other`
+  // create a list that is identical to `other`
   count = other.count;
   Node<ItemType> *p1 = sentinel = new Node<ItemType>(ItemType(), nullptr);
   Node<ItemType> *p2 = other.sentinel->next;
@@ -79,7 +79,6 @@ SLList<ItemType>::SLList(const SLList<ItemType> &other) {
 /** Destroy the SLList object. */
 template <typename ItemType>
 SLList<ItemType>::~SLList() {
-  // TODO:
   count = 0;
   while (sentinel != nullptr) {
         Node<ItemType> *temp = sentinel;
@@ -91,7 +90,6 @@ SLList<ItemType>::~SLList() {
 /** Return the i-th item in list. */
 template <typename ItemType>
 ItemType &SLList<ItemType>::get(int i) const {
-   // TODO:
   Node<ItemType> *p = sentinel->next;
   for(int j = 0; j < i; j++) {
       p = p->next;
@@ -102,7 +100,6 @@ ItemType &SLList<ItemType>::get(int i) const {
 /** Delete and return the first item of the list. */
 template <typename ItemType>
 ItemType SLList<ItemType>::removeFirst() {
-  // TODO:
   Node<ItemType> *p = sentinel;
   sentinel = sentinel->next;
   delete p;
@@ -115,8 +112,6 @@ ItemType SLList<ItemType>::removeFirst() {
 /** Delete and return the last item of the list. */
 template <typename ItemType>
 ItemType SLList<ItemType>::removeLast() {
-  // TODO:
-  
   Node<ItemType> *p1 = sentinel;
   Node<ItemType> *p2 = p1->next;
   while(p2->next != nullptr){
